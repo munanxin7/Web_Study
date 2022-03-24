@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery筛选选择器</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>我是ul里的第1个li</li>
+        <li>我是ul里的第2个li</li>
+        <li>我是ul里的第3个li</li>
+        <li>我是ul里的第4个li</li>
+        <li>我是ul里的第5个li</li>
+        <li>我是ul里的第6个li</li>
+    </ul>
+    <ol>
+        <li>我是ol里的第1个li</li>
+        <li>我是ol里的第2个li</li>
+        <li>我是ol里的第3个li</li>
+        <li>我是ol里的第4个li</li>
+        <li>我是ol里的第5个li</li>
+        <li>我是ol里的第6个li</li>
+    </ol>
+    <script>
+        $(function () {
+            $('ul li:first').css('color', 'red');
+            $("ul li:last").css("color", "skyblue");
+            $("ul li:eq(2)").css("color", "hotpink");
+            $("ol li:odd").css("color", "blue");
+            $("ol li:even").css("color", "red");
+        })
+    </script>
+</body>
+
+</html>

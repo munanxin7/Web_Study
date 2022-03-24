@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的语法扩展</title>
+    <script>
+        // 1. 更新变量
+        var myname = 'yyd'
+        console.log(myname);
+        myname = 'mnx'
+        console.log(myname);
+
+        // 2. 声明多个变量
+        /* var age = 18;
+        var address = '木叶忍者村';
+        var wage = 2000; */
+        var age = 18,
+            address = '木叶忍者村',
+            wage = 2000;
+
+        // 3. 声明变量的特殊情况
+        // 3.1 只声明 不赋值
+        var sex;
+        console.log(sex); // undefined
+        // 3.2 不声明 不赋值 直接使用
+        // console.log(tel); // 报错
+        // 3.3 不声明 直接赋值使用
+        qq = 110;
+        console.log(qq);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

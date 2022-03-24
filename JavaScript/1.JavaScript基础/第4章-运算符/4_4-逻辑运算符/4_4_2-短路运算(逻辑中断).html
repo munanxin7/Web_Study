@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>短路运算——逻辑中断</title>
+    <script>
+        // 短路运算的原理：当有多个表达式（值）时,左边的表达式值可以确定结果时,就不再继续运算右边的表达式的值
+
+        /*         
+            1. 逻辑与短路运算 
+                如果第一个表达式的值为真，则返回表达式2
+                如果第一个表达式的值为假，则返回表达式1
+        */
+        console.log(1 && 2);
+        console.log(0 && 1);
+
+        /* 
+            2. 逻辑或短路运算
+                如果第一个表达式的值为真，则返回表达式1
+                如果第一个表达式的值为假，则返回表达式2
+         */
+        console.log(1 || 2  );
+        console.log(0 || 1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

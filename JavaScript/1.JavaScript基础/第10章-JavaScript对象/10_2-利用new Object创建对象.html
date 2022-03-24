@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用new Object创建对象</title>
+    <script>
+        // 利用new Object创建对象
+        var obj = new Object(); // 创建了一个空的对象
+        obj.uname = '张三疯';
+        obj.age = 18;
+        obj.sex = '男';
+        obj.sayHi = function () {
+            console.log('hi~');
+        }
+        console.log(obj.uname);
+        console.log(obj['sex']);
+        obj.sayHi();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

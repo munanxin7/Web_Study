@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例——数组求和及平均值</title>
+    <script>
+        /*
+            案例分析
+                声明一个求和变量 sum。
+                遍历这个数组，把里面每个数组元素加到 sum 里面。
+                用求和变量 sum 除以数组的长度就可以得到数组的平均值。 
+         */
+        var arr = [24, 61, 531, 56, 6]
+        var sum = 0,
+            average = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        average = sum / arr.length;
+        console.log('数组和为：' + sum, '数组平均值为：' + average);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

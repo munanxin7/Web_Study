@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery筛选方法续</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol里的第1个li</li>
+        <li>我是ol里的第2个li</li>
+        <li class="item">我是ol里的第3个li</li>
+        <li>我是ol里的第4个li</li>
+        <li>我是ol里的第5个li</li>
+        <li>我是ol里的第6个li</li>
+    </ol>
+    <ul>
+        <li>我是ul里的第1个li</li>
+        <li>我是ul里的第2个li</li>
+        <li>我是ul里的第3个li</li>
+        <li>我是ul里的第4个li</li>
+        <li>我是ul里的第5个li</li>
+        <li>我是ul里的第6个li</li>
+    </ul>
+    <div class="current">current-div</div>
+    <div>div</div>
+    <script>
+        $(function () {
+            // 1. 兄弟元素
+            $("ol .item").siblings("li").css("color", "pink");
+            // 2. 第n个元素
+            // (1). 利用选择器的方式
+            $("ul li:eq(2)").css("color", "skyblue");
+            // (2). 利用选择方法
+            $("ul li").eq(3).css('color', "hotpink");
+
+            // 3. 判断是否具有某个类名
+            console.log($("div:first").hasClass("current"));
+            console.log($("div:last").hasClass("current"));
+        })
+    </script>
+</body>
+
+</html>

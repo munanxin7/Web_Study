@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery尺寸方法</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 2px solid red;
+            padding: 10px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        $(function () {
+            // 1. width() / height() 获取设置元素width 和 height 大小
+            console.log($("div").width());
+            console.log($("div").height());
+            $("div").width(250);
+
+            // 2. innerWidth() / innerHeight() 包含padding
+            console.log($("div").innerWidth());
+            console.log($("div").innerHeight());
+
+            // 3. outerWidth() / outerHeight() 包含padding和boder
+            console.log($("div").outerWidth());
+            console.log($("div").outerHeight());
+
+            // outerWidth(true) / outerHeight(true) 包含 padding boder margin
+            console.log($("div").outerWidth(true));
+            console.log($("div").outerHeight(true));
+        })
+    </script>
+</body>
+
+</html>

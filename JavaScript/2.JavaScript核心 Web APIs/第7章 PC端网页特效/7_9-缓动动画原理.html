@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缓动动画原理</title>
+    <style>
+        span {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn500">点击移动到500</button>
+    <button class="btn800">点击移动到800</button>
+    <span></span>
+    <script>
+        var span = document.querySelector('span');
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+
+        function animate(obj, target, callback) {
+            clearInterval(obj.timer); // 清除定时器，防止定时器的重复开启
+            obj.timer = setInterval(function () {
+                var step = (target - obj.offsetLeft) / 50;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    if (callback) {
+                        // 调用回调函数
+                        callback();
+                    }
+                }
+                obj.style.left = obj.offsetLeft + step + 'px'
+            }, 15);
+        }
+        btn500.addEventListener('click', function () {
+            animate(span, 500);
+        })
+        btn800.addEventListener('click', function () {
+            animate(span, 800, function () {
+                span.style.backgroundColor = 'pink';
+            });
+        })
+    </script>
+</body>
+
+</html>

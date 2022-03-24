@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery属性操作</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <a href="http://wwww.baidu.com" title="百度">链接</a>
+    <input type="checkbox" name="" id="" checked>
+    <div index="1" data-index="2"></div>
+    <span>123</span>
+    <script>
+        $(function () {
+            // 获取属性值 固有
+            console.log($("a").prop("href"));
+            // 设置属性值
+            $("a").prop("title", "去百度");
+            $("input").change(function () {
+                console.log($(this).prop("checked"));
+            });
+
+
+            // console.log($("div").prop("index"));
+            // 元素自定义属性获取
+            console.log($("div").attr("index"));
+            console.log($("div").attr("data-index"));
+
+            // 数据缓存 data
+            $("span").data("uname", "privet");
+            console.log($("span").data("uname"));
+            console.log($("div").data("index"));
+        })
+    </script>
+</body>
+
+</html>

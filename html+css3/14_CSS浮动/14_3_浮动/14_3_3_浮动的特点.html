@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的特点</title>
+    <style>
+        /* 浮动的标签顶对齐 */
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+            margin-top: 50px;
+        }
+
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            float: left;
+        }
+
+        .three {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        浮动的特点：
+            1. 浮动的标签会脱离标准流（简称：脱标），在标准流中不占位置
+            2. 浮动元素比标准流高半个级别，可以覆盖标准流中的元素
+            3. 浮动找浮动，下一个浮动元素在上一个浮动元素后面左右浮动
+            4. 浮动有特殊的显示效果，一行可以显示多个，可以设置宽高
+     -->
+    <div class="one">这是第一个div标签</div>
+    <div class="two">这是第二个div标签</div>
+    <div class="three">这是第三个div标签</div>
+</body>
+
+</html>

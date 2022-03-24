@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>继承性</title>
+    <style>
+        /* 控制文字的属性都能继承；不是控制文字的属性都不能继承 */
+        /* 存在自我属性的不继承父级属性 */
+        div {
+            color: red;
+            font-size: 30px;
+            height: 300px;
+        }
+
+        a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        这是div标签
+        <span>这是div里的span标签</span>
+        <a href="#">这是div里的a标签</a>
+    </div>
+</body>
+
+</html>

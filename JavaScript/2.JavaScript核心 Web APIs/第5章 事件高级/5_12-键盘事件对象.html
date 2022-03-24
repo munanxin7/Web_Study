@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件对象</title>
+</head>
+
+<body>
+    <script>
+        // 注：keyup 和 keydown 事件不区分字母大小写
+        // 注：keypress 区分字母大小写
+        document.addEventListener('keyup', function (e) {
+            // console.log(e);
+            console.log('up ' + e.keyCode);
+        });
+        document.addEventListener('keypress', function (e) {
+            console.log('press ' + e.keyCode);
+        });
+    </script>
+</body>
+
+</html>

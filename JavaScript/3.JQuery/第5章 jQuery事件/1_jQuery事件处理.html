@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery事件注册</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .current {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>我是ul里的第1个li</li>
+        <li>我是ul里的第2个li</li>
+        <li>我是ul里的第3个li</li>
+        <li>我是ul里的第4个li</li>
+        <li>我是ul里的第5个li</li>
+        <li>我是ul里的第6个li</li>
+    </ul>
+    <ol>
+
+    </ol>
+    <script>
+        $(function () {
+            // 1. 单个事件注册
+            // $("div").click(function () {
+            //     $(this).css("background", "purple");
+            // });
+            // $("div").mouseover(function () {
+            //     $(this).css("background", "skyblue");
+            // });
+
+            // 2. 事件处理on
+            // (1)可以绑定多个事件
+            // $("div").on({
+            //     mouseenter: function () {
+            //         $(this).css("background", "skyblue");
+            //     },
+            //     click: function () {
+            //         $(this).css("background", "purple");
+            //     },
+            //     mouseleave: function () {
+            //         $(this).css("background", "blue");
+            //     }
+            // })
+
+            $("div").on("mouseenter mouseleave", function () {
+                $(this).toggleClass("current");
+            });
+
+            // (2) on可以是实现事件委托
+            $("ul").on("click", "li", function () {
+                console.log($(this).html());
+            });
+            // (3) on可以给动态创建的元素绑定事件
+            $("ol").on("click", "li", function () {
+                console.log($(this).html());
+            })
+            var li = $("<li>我是ol里的li</li>");
+            $("ol").append(li);
+        })
+    </script>
+</body>
+
+</html>

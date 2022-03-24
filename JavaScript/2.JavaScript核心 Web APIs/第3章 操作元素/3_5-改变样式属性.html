@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改变样式属性</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // js修改style样式操作，产生的是行内样式
+        var div = document.querySelector('div');
+        div.onclick = function () {
+            this.style.backgroundColor = 'purple';
+            this.style.width = '250px'
+        }
+    </script>
+</body>
+
+</html>

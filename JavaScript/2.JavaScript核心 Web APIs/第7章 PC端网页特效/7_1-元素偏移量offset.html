@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素偏移量</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .father {
+            position: relative;
+            margin: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .son {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .w {
+            margin: 0 auto 200px;
+            padding: 10px;
+            border: 15px solid red;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <div class="w"></div>
+    <script>
+        var father = document.querySelector('.father');
+        var son = document.querySelector('.son');
+        var w = document.querySelector('.w');
+        // offset- 以带有定位的父亲为准 如果没有父亲或者父亲没有定位则以 body 为准
+        console.log(father.offsetTop);
+        console.log(father.offsetLeft);
+        console.log(son.offsetLeft);
+        console.log(w.offsetWidth);
+        console.log(w.offsetHeight);
+        console.log(son.offsetParent);
+    </script>
+</body>
+
+</html>

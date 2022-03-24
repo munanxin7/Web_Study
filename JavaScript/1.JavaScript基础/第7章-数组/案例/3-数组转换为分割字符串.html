@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例——数组转换为分割字符串</title>
+    <script>
+        /*
+            案例分析
+                思路：就是把里面的元素相加就好了，但是注意保证是字符相加。
+                需要一个新变量 str 用于存放转换完的字符串。
+                遍历原来的数组，分别把里面数据取出来，加到字符串变量 str 里面。 
+         */
+        var arr = [124, 48649, 18, 4456, 156, 1];
+        var str = '';
+        var sep = '!'
+        for (var i = 0; i < arr.length; i++) {
+            str += arr[i] + sep;
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

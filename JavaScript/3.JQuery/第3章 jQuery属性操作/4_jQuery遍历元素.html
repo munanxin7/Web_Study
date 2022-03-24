@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery遍历元素</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        $(function () {
+            //  隐式迭代
+            $("div").css("color", "red");
+            // 如果针对同一类元素做不同操作，需要用到遍历元素
+            // 1. each() 方法遍历元素
+            var arr = ["red", "green", "blue"];
+            $("div").each(function (index, domEle) {
+                // index 索引号
+                // domEle dom元素对象
+                $(domEle).css("color", arr[index]);
+            });
+
+            // 2.  $.each() 方法遍历元素 主要用于遍历数据，处理数据
+            $.each(arr, function (index, domEle) {
+                console.log(index);
+                console.log(domEle);
+            })
+
+            $.each({name:"privet",age:"18"},function(index,domEle){
+                console.log(index);
+                console.log(domEle);
+            })
+        })
+    </script>
+</body>
+
+</html>

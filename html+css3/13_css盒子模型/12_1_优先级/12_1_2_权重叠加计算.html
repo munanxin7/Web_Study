@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重叠加计算</title>
+    <style>
+        div #one {
+            color: orange;
+        }
+
+        .father .son {
+            color: skyblue;
+        }
+
+        .father p {
+            color: purple;
+        }
+
+        div p {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        （0 , 0 , 0 , 0）（行内样式的个数，id选择器的个数，类选择器的个数，标签选择器的个数）从前往后数，相同则按层叠性
+     -->
+    <!-- !important最高 -->
+    <div class="father">
+        <p class="son" id="one">这是div里的p标签</p>
+    </div>
+</body>
+
+</html>

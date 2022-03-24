@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON和JS对象的互转</title>
+</head>
+
+<body>
+    <script>
+        // JSON转JS对象 (反序列化)
+        var jsonStr = '{"a": "hello","b": "world"}';
+        var obj = JSON.parse(jsonStr);
+        console.log(obj);
+
+        // JS对象转JSON (序列化)
+        var obj2 = {
+            a: 'hello',
+            b: 'world',
+            c: false
+        };
+        var str = JSON.stringify(obj2);
+        console.log(str);
+    </script>
+</body>
+
+</html>

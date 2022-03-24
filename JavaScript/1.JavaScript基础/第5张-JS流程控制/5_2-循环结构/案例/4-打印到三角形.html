@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例——打印倒三角形</title>
+    <script>
+        /*
+            案例分析
+                一共有10行，但是每行的星星个数不一样，因此需要用到双重 for 循环
+                外层的 for 控制行数 i ，循环10次可以打印10行
+                内层的 for 控制每行的星星个数 j
+                核心算法： 每一行星星的个数 j = i ; j <= 10; j++ 每行打印完毕后，都需要重新换一行 
+         */
+        for (var i = 1; i <= 10; i++) {
+            var str = ''
+            for (var j = i; j <= 10; j++) {
+                str += '★';
+            }
+            console.log(str);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模板引擎的使用</title>
+    <script src="../libs/template-web.js"></script>
+    <script src="../libs/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script type="text/html" id="tpl-user">
+        <!-- 定义模板 -->
+    <div>{{title}}</div>
+    <div>姓名：<span>{{name}}</span></div>
+    <div>年龄：<span>{{age}}</span></div>
+    <div>会员：<span>{{isVIP}}</span></div>
+    <div>注册时间：<span>{{regTime | dateFormat}}</span></div>
+    <div>
+        爱好：
+        <ul>
+            {{each hobby}}
+            <li>索引是：{{$index}}，循环项是：{{$value}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    // 原文输出
+    {{@ test}}
+    <div>
+        {{if flag===0}}
+        flag的值是0
+        {{else if flag===1}}
+        flag的值是1
+        {{/if}}
+    </div>
+
+    </script>
+    <script>
+        data = {
+            title: '<h3>用户信息</h3>',
+            name: 'zs',
+            age: 20,
+            isVIP: true,
+            regTime: new Date(),
+            hobby: ['吃饭', '睡觉', '打豆豆'],
+            test: '<h3>测试原文输出</h3>',
+            flag: 1
+        }
+        // 定义过滤器
+        template.defaults.imports.dateFormat = function (date) {
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            return year + '-' + month + '-' + dates;
+        }
+        // 调用template函数
+        var htmlstr = template('tpl-user', data);
+        // 渲染HTML结构
+        $("#container").html(htmlstr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .father::before {
+            /* content属性必须添加，否则伪元素不生效 */
+            content: '这是一个';
+            color: green;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* 默认为行内元素 */
+            display: inline-block;
+        }
+
+        .father::after {
+            content: '标签';
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 伪元素 ：通过css创建标签，装饰性的不重要的小图 -->
+    <div class="father">div</div>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+/* 放index页面的样式表 */
+/* banner */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    /* background-color: pink; */
+}
+
+/* 侧导航 */
+.banner .aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside a {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+    padding-right: 20px;
+    height: 50px;
+    /* background-color: pink; */
+    color: #fff;
+}
+
+.banner .aside a span {
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+.banner .aside a:hover {
+    background-color: #27ba9b;
+}
+
+.banner .aside a::after {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    content: '';
+    width: 6px;
+    height: 12px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: -80px -110px;
+}
+
+/* 箭头 */
+.banner .prev,
+.banner .next {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    background-image: url(../images/sprites.png);
+}
+
+.banner .prev {
+    left: 260px;
+    background-position: 12px -60px;
+}
+
+.banner .next {
+    right: 10px;
+    background-position: -24px -60px;
+}
+
+/* 圆点 */
+.banner ol {
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+    /* width: 200px; */
+    height: 10px;
+    /* background-color: pink; */
+}
+
+.banner ol li {
+    float: left;
+    margin-right: 24px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, .4);
+    cursor: pointer;
+}
+
+.banner ol .current {
+    background-color: #fff;
+}
+
+/* 新鲜好物 */
+.goods .hd {
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+
+.goods .hd h2 {
+    float: left;
+    height: 114px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.goods .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd a,
+.fresh .hd .more {
+    float: right;
+    color: #999;
+}
+
+.goods .hd a::after,
+.fresh .hd .more::after {
+    content: '';
+    display: inline-block;
+    margin-left: 14px;
+    width: 7px;
+    height: 14px;
+    /* background-color: green; */
+    background-image: url(../images/sprites.png);
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+
+.goods .bd li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.goods .bd li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.goods .bd li img {
+    max-width: 100%;
+}
+
+.goods .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.goods .bd li div {
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.goods .bd li div span {
+    font-size: 24px;
+}
+
+.goods .bd li b {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    width: 28px;
+    height: 50px;
+    border: 2px solid #27ba9b;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* 生鲜 */
+.fresh {
+    margin-bottom: 20px;
+}
+
+.fresh .hd {
+    height: 96px;
+    /* background-color: pink; */
+    line-height: 96px;
+}
+
+.fresh .hd h2 {
+    float: left;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.fresh .hd .more {
+    float: right;
+}
+
+.fresh .hd ul {
+    float: right;
+    margin-right: 65px;
+}
+
+.fresh .hd ul li {
+    float: left;
+}
+
+.fresh .hd ul li a {
+    padding: 2px 6px;
+    margin-right: 6px;
+}
+
+.fresh .hd ul li a:hover {
+    background-color: #27ba9b;
+    color: #fefbfc;
+}
+
+.fresh .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
+    /* background-color: pink; */
+}
+
+.fresh .bd .right {
+    float: left;
+    width: 1000px;
+    height: 610px;
+    /* background-color: skyblue; */
+}
+
+.fresh .bd .right li {
+    position: relative;
+    float: left;
+    padding-left: 8px;
+    width: 242px;
+    text-align: center;
+    /* height: 200px; */
+    /* background-color: pink; */
+}
+
+.fresh .bd .right li img {
+    max-width: 100%;
+}
+
+.fresh .bd .right li h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.fresh .bd .right li div {
+    font-size: 17px;
+    color: #9a2e1f;
+}
+
+.fresh .bd .right li div span {
+    font-size: 22px;
+} 

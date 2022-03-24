@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery筛选方法</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="yeye">
+        <div class="father">
+            <div class="son">儿子</div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <p>我是p</p>
+        <div>
+            <p>我是p</p>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            // 1. 父 最近一级的父级元素
+            console.log($(".son").parent());
+
+            // 2. 子
+            // (1). 最近一级的子级元素
+            $(".nav").children("p").css("color", "red");
+            // (2). 所有子级元素
+            $(".nav").find("p").css("fontSize", "20px");
+
+            // 3. 兄
+        });
+    </script>
+</body>
+
+</html>

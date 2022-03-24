@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子节点操作</title>
+</head>
+
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是ul里的li</li>
+        <li>我是ul里的li</li>
+        <li>我是ul里的li</li>
+        <li>我是ul里的li</li>
+    </ul>
+    <ol>
+        <li>我是ol里的li</li>
+        <li>我是ol里的li</li>
+        <li>我是ol里的li</li>
+        <li>我是ol里的li</li>
+    </ol>
+    <div class="demo">
+        <div class="box"><span class="erweima">x</span></div>
+    </div>
+    <script>
+        var ul = document.querySelector('ul');
+        // var lis=ul.querySelectorAll('li');
+        // 子节点 childNodes 所有的子节点 包含元素节点和文本节点 标准(不推荐)
+        console.log(ul.childNodes);
+        // children 只读属性，返回所有的子元素节点 非标准(推荐)
+        console.log(ul.children);
+    </script>
+</body>
+
+</html>

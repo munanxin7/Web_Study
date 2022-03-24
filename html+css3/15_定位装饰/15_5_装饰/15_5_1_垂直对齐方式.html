@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直对齐方式</title>
+    <style>
+        /* 浏览器把行内或行内块标签当做文字处理，默认文字是按基线对齐 */
+        input {
+            height: 50px;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text"><input type="button" value="搜索">
+    <br><br>
+    <img src="../images/1.jpg" alt=""><input type="text">
+    <br><br>
+    <div class="father"><input type="text"></div>
+</body>
+
+</html>

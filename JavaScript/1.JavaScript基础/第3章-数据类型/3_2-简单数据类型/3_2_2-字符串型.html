@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单数据类型——字符串型</title>
+    <script>
+        // 字符串型可以是引号中的任意文本，其语法为双引号""和单引号''
+        // 推荐使用单引号
+        var str = '字符串';
+        console.log(str);
+
+        // 1. 字符串引号嵌套 js可以用单引号嵌套双引号，或者用双引号嵌套单引号
+        str = '一个"字符串"';
+        console.log(str);
+
+        /* 
+            2. 字符串转义符
+                \n 换行
+                \\ 斜杠\
+                \' 单引号'
+                \" 双引号"
+                \t tab缩进
+                \b 空格
+         */
+
+        console.log('换\n行');
+
+        // 3. 检测获取字符串长度 length
+        str = 'my name is yyd'
+        console.log(str.length);
+
+        /* 
+            4. 字符串拼接
+                多个字符串之间可以使用 + 进行拼接，其拼接方式为字符串 + 任何类型 = 拼接之后的新字符串
+                拼接前会吧与字符串相加的任何类型转成字符串，再拼接成一个新的字符串
+         */
+        console.log('字符串' + '拼接');
+        console.log('字符串' + 1);
+
+        // 5. 字符串拼接加强
+        console.log('字符串' + '拼' + '接');
+        var num = 1;
+        console.log('字符串' + num + '拼接');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

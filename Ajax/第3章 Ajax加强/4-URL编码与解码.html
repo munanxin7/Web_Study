@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL编码与解码</title>
+</head>
+
+<body>
+    <script>
+        var str = '中文';
+        var str2 = encodeURI(str);
+        console.log(str2);
+        console.log('--------------------');
+        var str3 = decodeURI('%E4%B8%AD');
+        console.log(str3);
+    </script>
+</body>
+
+</html>

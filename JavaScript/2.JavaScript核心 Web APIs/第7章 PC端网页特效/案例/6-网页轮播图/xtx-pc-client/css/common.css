@@ -1,0 +1,229 @@
+/* 各个页面相同的样式表：头，尾部 */
+/* 版心 */
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 快捷导航 */
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.shortcut .wrapper {
+    height: 52px;
+    /* background-color: pink; */
+}
+
+.shortcut .wrapper ul {
+    float: right;
+}
+
+.shortcut .wrapper li {
+    float: left;
+    line-height: 52px;
+}
+
+.shortcut .wrapper a {
+    padding: 0 16px;
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+.shortcut .wrapper a span {
+    display: inline-block;
+    margin-right: 8px;
+    width: 11px;
+    height: 16px;
+    background-image: url(../images/sprites.png);
+    background-position: -160px -70px;
+
+    vertical-align: middle;
+}
+
+/* 头部 */
+.header {
+    margin: 30px auto;
+    height: 70px;
+    /* background-color: pink; */
+}
+
+.header .logo {
+    float: left;
+    margin-right: 40px;
+    width: 208px;
+    height: 70px;
+    /* background-color: pink; */
+}
+
+/* logo 搜索引擎优化 */
+.header .logo h1 {
+    width: 208px;
+    height: 70px;
+}
+
+.header .logo h1 a {
+    display: block;
+    width: 208px;
+    height: 70px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    font-size: 0px;
+}
+
+.header .nav {
+    float: left;
+    margin-right: 34px;
+    height: 70px;
+    /* background-color: pink; */
+}
+
+.header .nav li {
+    float: left;
+    margin-right: 48px;
+    line-height: 70px;
+}
+
+.header .nav li a {
+    padding-bottom: 8px;
+}
+
+.header .nav li a:hover {
+    color: #25ba9b;
+    border-bottom: 1px solid #25ba9b;
+}
+
+.header .search {
+    position: relative;
+    float: left;
+    margin-top: 24px;
+    margin-right: 16px;
+    width: 172px;
+    height: 30px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.header .search input {
+    padding-left: 30px;
+    width: 172px;
+    height: 28px;
+}
+
+.header .search input::placeholder {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.header .search span {
+    position: absolute;
+    left: 2px;
+    top: 0;
+    /* display: inline-block; */
+    width: 18px;
+    height: 18px;
+    /* background-color: pink; */
+    background-image: url(../images/sprites.png);
+    background-position: -80px -70px;
+}
+
+.header .car {
+    position: relative;
+    float: left;
+    margin-top: 26px;
+    width: 24px;
+    height: 24px;
+    /* background-color: skyblue; */
+    background-image: url(../images/sprites.png);
+    background-position: -120px -70px;
+}
+
+.header .car span {
+    position: absolute;
+    right: -12px;
+    top: -6px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+}
+
+/* 版权区域 */
+.footer {
+    height: 342px;
+    background-color: #333;
+}
+
+.footer .wrapper {
+    width: 1394px;
+}
+
+.footer .wrapper .top {
+    padding-top: 60px;
+    padding-left: 135px;
+    height: 175px;
+    border-bottom: 3px solid #434343;
+}
+
+.footer .wrapper .top li {
+    position: relative;
+    float: left;
+    margin-right: 300px;
+    width: 195px;
+    height: 58px;
+    /* background-color: pink; */
+    line-height: 58px;
+}
+
+.footer .wrapper .top li:last-child {
+    margin-right: 0;
+}
+
+/* 伪元素添加的标签 行内显示模式 */
+.footer .wrapper .top li::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* display: inline-block; */
+    content: '';
+    width: 58px;
+    height: 58px;
+    background-image: url(../images/sprites.png);
+    vertical-align: middle;
+}
+
+.footer .wrapper .top li:nth-child(2)::before {
+    background-position: -130px 0;
+}
+
+.footer .wrapper .top li:last-child:before {
+    background-position: -64px 0;
+}
+
+.footer .wrapper .top li span {
+    margin-left: 78px;
+    font-size: 28px;
+    color: #fff;
+}
+
+.footer .wrapper .bottom {
+    padding-top: 40px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.footer .wrapper .bottom a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .wrapper .bottom p {
+    margin-bottom: 20px;
+}

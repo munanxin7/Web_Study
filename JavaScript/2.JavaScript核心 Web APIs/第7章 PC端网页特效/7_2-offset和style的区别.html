@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset和style的区别</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector('.box');
+        // 注：offset可以得到任意样式表中的样式值 style只能得到行内样式表中的样式值
+        // offset获得的数值是没有单位的 style获得的是带有单位的字符串
+        // offset包含padding+border style不包含padding和border
+        // offset是只读属性 style是可读写属性
+        // 推荐：获取元素大小位置-offset    给元素赋值-style
+        console.log(box.offsetWidth);
+        console.log(box.style.width);
+    </script>
+</body>
+
+</html>
