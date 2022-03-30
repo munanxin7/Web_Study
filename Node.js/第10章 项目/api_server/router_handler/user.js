@@ -89,7 +89,7 @@ exports.login = (req, res) => {
             return res.cc(err);
         }
         // 执行 SQL 语句成功，但是获取到的数据条数不等于1
-        if (results.length != 1) {
+        if (results.length !== 1) {
             return res.cc('该用户不存在，请先注册！');
         }
         // TODO: 判断密码是否正确
@@ -112,7 +112,7 @@ exports.login = (req, res) => {
         res.send({
             status: 0,
             message: '登录成功',
-            token: 'Brarer ' + tokenStr
+            token: 'Bearer ' + tokenStr
         })
     })
 }
