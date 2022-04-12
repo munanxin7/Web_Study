@@ -10,8 +10,19 @@ const htmlPlugin = new HtmlPlugin({
   filename: './index.html'
 });
 
+// 导入自动清理dist的构造函数
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
+
 // 导出 webpack 配置对象
 module.exports = {
+  // 开发调试阶段
+  // devtool: 'eval-source-map',
+  // 正式发布阶段
+  devtool: 'nosources-source-map',
+  // 调试发布阶段
+  // devtool: 'source-map',
   // mode 代表 webpack 运行的模式，可选值有 development 和 production
   // 注：开发时用 development ，发布上线时用 production
   mode: 'development',
@@ -22,7 +33,7 @@ module.exports = {
     // 存放到目录
     path: path.join(__dirname, './dist'),
     // 生成的文件名
-    filename: 'bundle.js',
+    filename: 'js/bundle.js',
   },
   devServer: {
     static: {
@@ -37,6 +48,27 @@ module.exports = {
   },
   // 插件的数组，将来在 webpack 运行时，会加载并调用这些插件
   plugins: [
-    htmlPlugin
-  ]
+    htmlPlugin,
+    new CleanWebpackPlugin()
+  ],
+  module: {
+    rules: [
+      // 定义了不同模块对应的loader
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }, {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
+      }, {
+        test: /\.jpg|png|gif|jpeg$/,
+        // 限定小于 limit 字节的图片被转换成base64存储
+        use: 'url-loader?limit=22229&outputPath=images'
+      }, {
+        test: /\.js$/,
+        use: 'babel-loader',
+        exclude: /node_modules/
+      }
+    ]
+  }
 }
