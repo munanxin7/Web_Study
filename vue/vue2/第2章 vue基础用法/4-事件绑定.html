@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事件绑定</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>count 的值是：{{ count }}</p>
+    <!-- v-on:用于事件的绑定，可以简写为 @ -->
+    <!-- 在绑定事件处理函数的时候可以使用()传递参数 -->
+    <button v-on:click="add(1)">+1</button>
+    <button @click="sub">-1</button>
+  </div>
+  <script src="../lib/vue-2.6.12.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        count: 0
+      },
+      // 定义事件的处理函数
+      methods: {
+        add(n) {
+          vm.count += n;
+        },
+        sub() {
+          this.count--;
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>

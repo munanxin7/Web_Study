@@ -13,7 +13,6 @@ router.get('/get', (req, res) => {
         status: 0, // 0 表示处理成功，1 表示处理失败
         msg: 'GET 请求成功', // 状态的描述
         data: query // 响应的数据
-
     });
 });
 
