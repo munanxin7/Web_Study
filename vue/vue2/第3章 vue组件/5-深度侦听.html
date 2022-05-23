@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深度侦听</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="info.username">
+  </div>
+  <script src="../lib/vue-2.6.12.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        // 用户的信息对象
+        info: {
+          username: 'admin'
+        }
+      },
+      methods: {},
+      watch: {
+        // 如果侦听的是一个对象。如果对象中的属性发生了变化，不会触发侦听器
+        /* info(newVal) {
+          console.log(newVal);
+        } */
+
+        /* info: {
+          handler(newVal) {
+            console.log(newVal);
+          },
+          // 开启深度侦听
+          deep: true
+        } */
+
+        // 如果要侦听的是对象的子属性，则必须包裹一层单引号
+        'info.username'(newVal) {
+          console.log(newVal);
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>侦听器</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="username">
+  </div>
+  <script src="../lib/vue-2.6.12.js"></script>
+  <script src="../lib/jquery-3.6.0.min.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        username: ''
+      },
+      methods: {},
+      // 所有的侦听器都应该定义到 watch 节点下
+      watch: {
+        // 侦听器本质上是一个函数，要监视哪个数据的变化，就把其数据名作为方法名
+        // 方法格式的侦听器：缺点无法刚进入页面的时候，自动触发
+        username(newval) {
+          if (newval === '') return;
+          // 调用 jQuery 中的 Ajax 发起请求，判断 newVal 是否被占用
+          $.ajax({
+            type: "GET",
+            url: "https://www.escook.cn/api/finduser/" + newval,
+            data: "",
+            success: function (response) {
+              console.log(response);
+            }
+          });
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
