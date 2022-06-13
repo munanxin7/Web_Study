@@ -41,14 +41,14 @@
 </template>
 
 <script>
-import Left from "@/components/Left.vue";
-import Article from "@/components/Article.vue";
+import Left from '@/components/Left.vue'
+import Article from '@/components/Article.vue'
 export default {
   components: {
     Left,
     Article,
   },
-};
+}
 </script>
 
 <style lang="less">
